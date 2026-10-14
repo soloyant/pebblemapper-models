@@ -1,6 +1,6 @@
 {
  "format": 1,
- "list_version": 3,
+ "list_version": 4,
  "published": "2026-10-14",
  "app_releases": [],
  "models": [
@@ -333,6 +333,168 @@
        ],
        "check_timeout_s": 900,
        "speed_vs_gpu": 0.0
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "imagegrains",
+   "backends": [
+    {
+     "name": "imagegrains",
+     "display_name": "ImageGrains 2.0 (Mair et al., 2026)",
+     "package": "pm_imagegrains_backend",
+     "module": "backend",
+     "factory": "make_backend"
+    }
+   ],
+   "authors": "Mair, D., Witz, G., Do Prado, A., Garefalakis, P., et al.",
+   "citation": "Mair, D., et al. (2026). ImageGrains 2.0: Improved precision and generalization for grain segmentation. Earth Surface Dynamics, 14, 527-551. https://doi.org/10.5194/esurf-14-527-2026; and Pachitariu, M., Rariden, M., & Stringer, C. (2025). Cellpose-SAM. bioRxiv. https://doi.org/10.1101/2025.04.28.651001",
+   "licence_code": "BSD-3-Clause (imagegrains, cellpose); MIT (adapter)",
+   "licence_weights": "CC BY 4.0 (IG2_full_set_cp_SAM, Zenodo 10.5281/zenodo.15728186)",
+   "description": "Cellpose-SAM fine-tuned on the IG2 sediment dataset (ImageGrains 2.0.2). Every clast is scored 1.0 (no per-instance confidence).",
+   "homepage": "https://github.com/soloyant/pebblemapper-backend-imagegrains",
+   "runs_in": "own",
+   "releases": [
+    {
+     "release": "1.0.0",
+     "commit": "63cc273d71082d31524b2c3311548f5d9cf83936",
+     "summary": "First release: ImageGrains 2.0.2 (Cellpose-SAM) with the IG2_full_set_cp_SAM model.",
+     "notes": "https://github.com/soloyant/pebblemapper-backend-imagegrains/releases/tag/v1.0.0",
+     "results_may_change": false,
+     "withdrawn": false,
+     "variants": {
+      "gpu": {
+       "files": [
+        {
+         "role": "archive",
+         "url": "https://github.com/soloyant/pebblemapper-backend-imagegrains/releases/download/v1.0.0/imagegrains-1.0.0.zip",
+         "size": 12767,
+         "sha256": "e0e4a09627c75151fa3dd27e6856bd5f1a5f071184d05dda74baa8c06da6fd73"
+        },
+        {
+         "role": "conda_lock",
+         "url": "https://github.com/soloyant/pebblemapper-backend-imagegrains/releases/download/v1.0.0/ig2-conda-gpu.lock.txt",
+         "size": 2773,
+         "sha256": "b3359febb4ee8e5e221b07522488a376097b44d3b0759eea2a76f1d01ca1de77"
+        },
+        {
+         "role": "pip_lock",
+         "url": "https://github.com/soloyant/pebblemapper-backend-imagegrains/releases/download/v1.0.0/ig2-pip-gpu.lock.txt",
+         "size": 14831,
+         "sha256": "b72ed5e9757a7d0e814f0d1ec7a3dde9cc4cfcf588f84ee39a54bf56890558ef"
+        },
+        {
+         "role": "check_image",
+         "url": "https://github.com/soloyant/pebblemapper-backend-imagegrains/releases/download/v1.0.0/ig2-check.jpg",
+         "size": 169407,
+         "sha256": "1261d2c308e15930b18923ebc36bde74f0d85b06212c1a0fe0dd4604c3036f15"
+        },
+        {
+         "role": "weights",
+         "url": "https://github.com/soloyant/pebblemapper-backend-imagegrains/releases/download/v1.0.0/IG2_full_set_cp_SAM",
+         "size": 1218643463,
+         "sha256": "17ecfd30093cab536aa73dbc5638245a992e6dfe7f6f6c50136b2de928ea853b",
+         "dest": "weights/IG2_full_set_cp_SAM"
+        }
+       ],
+       "download_bytes": 4023456230,
+       "disk_bytes": 7043323914,
+       "peak_bytes": 11066780144,
+       "longest_path": 159,
+       "minutes": [
+        10,
+        30
+       ],
+       "check_timeout_s": 1200,
+       "min_driver": "527.41",
+       "compute_cap": [
+        5.0,
+        9.0
+       ],
+       "min_vram_mb": 3000
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "imagegrains1",
+   "backends": [
+    {
+     "name": "imagegrains1",
+     "display_name": "ImageGrains 1.2 (Mair et al., 2023)",
+     "package": "pm_imagegrains_backend",
+     "module": "backend",
+     "factory": "make_backend_v1"
+    }
+   ],
+   "authors": "Mair, D., Witz, G., Do Prado, A. H., Garefalakis, P., & Schlunegger, F.",
+   "citation": "Mair, D., Witz, G., Do Prado, A. H., Garefalakis, P., & Schlunegger, F. (2023). Automated detecting, segmenting and measuring of grains in images of fluvial sediments. Earth Surface Processes and Landforms. https://doi.org/10.1002/esp.5755; and Stringer, C. A., & Pachitariu, M. (2021). Cellpose. Nature Methods, 18, 100-106.",
+   "licence_code": "BSD-3-Clause (imagegrains, cellpose); MIT (adapter)",
+   "licence_weights": "CC BY 4.0 (IG2_full_set.200525, Zenodo 10.5281/zenodo.15728186)",
+   "description": "A Cellpose 2 network trained on the IG2 sediment dataset (ImageGrains 1.2.1). Every clast is scored 1.0 (no per-instance confidence).",
+   "homepage": "https://github.com/soloyant/pebblemapper-backend-imagegrains",
+   "runs_in": "own",
+   "releases": [
+    {
+     "release": "1.0.0",
+     "commit": "63cc273d71082d31524b2c3311548f5d9cf83936",
+     "summary": "First release: ImageGrains 1.2.1 (Cellpose 2) with the IG2_full_set.200525 model.",
+     "notes": "https://github.com/soloyant/pebblemapper-backend-imagegrains/releases/tag/v1.0.0",
+     "results_may_change": false,
+     "withdrawn": false,
+     "variants": {
+      "gpu": {
+       "files": [
+        {
+         "role": "archive",
+         "url": "https://github.com/soloyant/pebblemapper-backend-imagegrains/releases/download/v1.0.0/imagegrains1-1.0.0.zip",
+         "size": 12767,
+         "sha256": "e0e4a09627c75151fa3dd27e6856bd5f1a5f071184d05dda74baa8c06da6fd73"
+        },
+        {
+         "role": "conda_lock",
+         "url": "https://github.com/soloyant/pebblemapper-backend-imagegrains/releases/download/v1.0.0/ig1-conda-gpu.lock.txt",
+         "size": 2775,
+         "sha256": "511d09cac9fdf64ef795771d644492728c2915b97eed3f70ee8a19fc600e0e1f"
+        },
+        {
+         "role": "pip_lock",
+         "url": "https://github.com/soloyant/pebblemapper-backend-imagegrains/releases/download/v1.0.0/ig1-pip-gpu.lock.txt",
+         "size": 14524,
+         "sha256": "fbe6b8304a1730fae0e4f4d8483aec68697901888de102115b42d321c5af5bfb"
+        },
+        {
+         "role": "check_image",
+         "url": "https://github.com/soloyant/pebblemapper-backend-imagegrains/releases/download/v1.0.0/ig1-check.jpg",
+         "size": 169407,
+         "sha256": "1261d2c308e15930b18923ebc36bde74f0d85b06212c1a0fe0dd4604c3036f15"
+        },
+        {
+         "role": "weights",
+         "url": "https://github.com/soloyant/pebblemapper-backend-imagegrains/releases/download/v1.0.0/IG2_full_set.200525",
+         "size": 26557120,
+         "sha256": "97be6f39cf0b8a3324ecfa12d3f96f3d5a0dae508242eeba0e7c2e02579a44fb",
+         "dest": "weights/IG2_full_set.200525"
+        }
+       ],
+       "download_bytes": 2825043194,
+       "disk_bytes": 5832720227,
+       "peak_bytes": 8657763421,
+       "longest_path": 159,
+       "minutes": [
+        8,
+        25
+       ],
+       "check_timeout_s": 900,
+       "min_driver": "527.41",
+       "compute_cap": [
+        5.0,
+        9.0
+       ],
+       "min_vram_mb": 2000
       }
      }
     }

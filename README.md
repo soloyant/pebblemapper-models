@@ -30,6 +30,8 @@ generated entry here and increases `list_version`.
 | OrthoSAM (Chan, Rheinwalt & Bookhagen, 2026), releases 1.0.0 and 1.0.1 | [pebblemapper-backend-orthosam](https://github.com/soloyant/pebblemapper-backend-orthosam) | Apache-2.0 (OrthoSAM, Segment Anything), MIT (adapter) |
 | Segmenteverygrain (Sylvester et al., 2025), release 1.0.0 | [pebblemapper-backend-segmenteverygrain](https://github.com/soloyant/pebblemapper-backend-segmenteverygrain) | Apache-2.0 (segmenteverygrain, SAM 2), MIT (adapter) |
 | PebbleCountsAuto (Purinton & Bookhagen, 2019), release 1.0.0 | [pebblemapper-backend-pebblecounts](https://github.com/soloyant/pebblemapper-backend-pebblecounts) | GPL-3.0-or-later |
+| ImageGrains 2.0 (Mair et al., 2026), release 1.0.0 | [pebblemapper-backend-imagegrains](https://github.com/soloyant/pebblemapper-backend-imagegrains) | BSD-3-Clause (imagegrains, cellpose), MIT (adapter); model CC BY 4.0 |
+| ImageGrains 1.2 (Mair et al., 2023), release 1.0.0 | [pebblemapper-backend-imagegrains](https://github.com/soloyant/pebblemapper-backend-imagegrains) | BSD-3-Clause (imagegrains, cellpose), MIT (adapter); model CC BY 4.0 |
 
 ## Licence
 

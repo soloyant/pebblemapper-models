@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/soloyant/pebblemapper-models/list.schema.json",
+  "title": "PebbleMapper model list, format 1",
+  "type": "object",
+  "required": ["format", "list_version", "published", "models"],
+  "additionalProperties": false,
+  "properties": {
+    "format": {"const": 1},
+    "list_version": {"type": "integer", "minimum": 1},
+    "published": {"type": "string", "format": "date"},
+    "app_releases": {"type": "array", "description": "Defined by spec 031; validated as objects only in 030.", "items": {"type": "object"}},
+    "models": {"type": "array", "items": {"$ref": "#/$defs/model"}}
+  },
+  "$defs": {
+    "id": {"type": "string", "pattern": "^[a-z0-9-]{1,32}$"},
+    "semver": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "text": {"type": "string", "maxLength": 300},
+    "file": {
+      "type": "object",
+      "required": ["role", "url", "size", "sha256"],
+      "additionalProperties": false,
+      "properties": {
+        "role": {"enum": ["archive", "upstream", "wheel", "check_image", "conda_lock", "pip_lock", "weights"]},
+        "url": {"type": "string", "pattern": "^https://"},
+        "size": {"type": "integer", "minimum": 1},
+        "sha256": {"$ref": "#/$defs/sha256"},
+        "dest": {"type": "string", "description": "Relative path under the model folder for weights/upstream; no '..', no drive, no leading slash."}
+      }
+    },
+    "variant": {
+      "type": "object",
+      "required": ["files", "download_bytes", "disk_bytes", "peak_bytes", "longest_path", "minutes", "check_timeout_s"],
+      "additionalProperties": false,
+      "properties": {
+        "files": {"type": "array", "items": {"$ref": "#/$defs/file"}},
+        "min_driver": {"type": "string", "description": "gpu only, e.g. '527.41'"},
+        "compute_cap": {"type": "array", "items": {"type": "number"}, "minItems": 2, "maxItems": 2, "description": "gpu only: [min, max]"},
+        "min_vram_mb": {"type": "integer"},
+        "speed_vs_gpu": {"type": "number", "description": "cpu only: N in 'about N times slower'"},
+        "download_bytes": {"type": "integer", "description": "everything downloaded: listed files plus locked packages"},
+        "disk_bytes": {"type": "integer"},
+        "peak_bytes": {"type": "integer"},
+        "longest_path": {"type": "integer", "description": "longest relative path under the model folder, characters"},
+        "minutes": {"type": "array", "items": {"type": "integer"}, "minItems": 2, "maxItems": 2},
+        "check_timeout_s": {"type": "integer"}
+      }
+    },
+    "release": {
+      "type": "object",
+      "required": ["release", "commit", "variants", "withdrawn"],
+      "additionalProperties": false,
+      "properties": {
+        "release": {"$ref": "#/$defs/semver"},
+        "commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+        "summary": {"$ref": "#/$defs/text"},
+        "notes": {"type": "string", "pattern": "^https://github\\.com/soloyant/"},
+        "results_may_change": {"type": "boolean"},
+        "withdrawn": {"type": "boolean"},
+        "replacement": {"$ref": "#/$defs/semver"},
+        "variants": {
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": false,
+          "properties": {"gpu": {"$ref": "#/$defs/variant"}, "cpu": {"$ref": "#/$defs/variant"}}
+        }
+      }
+    },
+    "backend": {
+      "type": "object",
+      "required": ["name", "display_name", "package", "module", "factory"],
+      "additionalProperties": false,
+      "properties": {
+        "name": {"$ref": "#/$defs/id"},
+        "display_name": {"$ref": "#/$defs/text"},
+        "package": {"type": "string", "pattern": "^[a-z_][a-z0-9_]*$"},
+        "module": {"type": "string", "pattern": "^[a-z_][a-z0-9_]*$", "description": "submodule of the package holding the factory, e.g. backend"},
+        "factory": {"type": "string", "pattern": "^[a-z_][a-z0-9_]*$"}
+      }
+    },
+    "model": {
+      "type": "object",
+      "required": ["id", "backends", "authors", "citation", "licence_code", "licence_weights", "description", "homepage", "runs_in", "releases"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"$ref": "#/$defs/id"},
+        "backends": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/backend"}},
+        "authors": {"$ref": "#/$defs/text"},
+        "citation": {"type": "string", "maxLength": 600},
+        "licence_code": {"$ref": "#/$defs/text"},
+        "licence_weights": {"$ref": "#/$defs/text"},
+        "description": {"$ref": "#/$defs/text"},
+        "homepage": {"type": "string", "pattern": "^https://github\\.com/soloyant/pebblemapper-backend-"},
+        "runs_in": {"enum": ["own", "app"]},
+        "releases": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/release"}}
+      }
+    }
+  }
+}

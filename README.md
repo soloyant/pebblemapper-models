@@ -27,7 +27,7 @@ generated entry here and increases `list_version`.
 
 | Model | Plug-in | Licences |
 |---|---|---|
-| OrthoSAM (Chan, Rheinwalt & Bookhagen, 2026) | [pebblemapper-backend-orthosam](https://github.com/soloyant/pebblemapper-backend-orthosam) | Apache-2.0 (OrthoSAM, Segment Anything), MIT (adapter) |
+| OrthoSAM (Chan, Rheinwalt & Bookhagen, 2026), releases 1.0.0 and 1.0.1 | [pebblemapper-backend-orthosam](https://github.com/soloyant/pebblemapper-backend-orthosam) | Apache-2.0 (OrthoSAM, Segment Anything), MIT (adapter) |
 
 ## Licence
 

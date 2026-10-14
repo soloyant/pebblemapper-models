@@ -1,6 +1,6 @@
 {
  "format": 1,
- "list_version": 1,
+ "list_version": 2,
  "published": "2026-10-14",
  "app_releases": [],
  "models": [
@@ -74,6 +74,72 @@
        "download_bytes": 3041880967,
        "disk_bytes": 5807864740,
        "peak_bytes": 8849745707,
+       "longest_path": 139,
+       "minutes": [
+        10,
+        30
+       ],
+       "check_timeout_s": 900,
+       "min_driver": "527.41",
+       "compute_cap": [
+        5.0,
+        9.0
+       ],
+       "min_vram_mb": 3000
+      }
+     }
+    },
+    {
+     "release": "1.0.1",
+     "commit": "6a507fee5c11f285338aebd76a392c1a465a885a",
+     "summary": "The licence line recorded in results now states that releases carry an unmodified copy of OrthoSAM's package. Detection is unchanged.",
+     "notes": "https://github.com/soloyant/pebblemapper-backend-orthosam/releases/tag/v1.0.1",
+     "results_may_change": false,
+     "withdrawn": false,
+     "variants": {
+      "gpu": {
+       "files": [
+        {
+         "role": "archive",
+         "url": "https://github.com/soloyant/pebblemapper-backend-orthosam/releases/download/v1.0.1/orthosam-1.0.1.zip",
+         "size": 13571,
+         "sha256": "596b968f0380022995218182c7f882ec8eebb19c749b9253633a7840342c9d3f"
+        },
+        {
+         "role": "upstream",
+         "url": "https://github.com/soloyant/pebblemapper-backend-orthosam/releases/download/v1.0.1/upstream-OrthoSAM-18da0e5.zip",
+         "size": 47062,
+         "sha256": "08e71dd071c45a8b28e867a24197a18cdb0cce19450931ecddce775cfbd1de9a"
+        },
+        {
+         "role": "conda_lock",
+         "url": "https://github.com/soloyant/pebblemapper-backend-orthosam/releases/download/v1.0.1/conda-gpu.lock.txt",
+         "size": 2928,
+         "sha256": "8106dba378ac39e4deafbe543921033da1b0b45dcbc2f100ffb4a1f8ebef8157"
+        },
+        {
+         "role": "pip_lock",
+         "url": "https://github.com/soloyant/pebblemapper-backend-orthosam/releases/download/v1.0.1/pip-gpu.lock.txt",
+         "size": 4089,
+         "sha256": "db4250fdca868c81874cede5647bdfc47cc1d765865c5bbfa7d0eacdd4cd7b65"
+        },
+        {
+         "role": "check_image",
+         "url": "https://github.com/soloyant/pebblemapper-backend-orthosam/releases/download/v1.0.1/check.jpg",
+         "size": 169407,
+         "sha256": "1261d2c308e15930b18923ebc36bde74f0d85b06212c1a0fe0dd4604c3036f15"
+        },
+        {
+         "role": "weights",
+         "url": "https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth",
+         "size": 375042383,
+         "sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+         "dest": "weights/sam_vit_b_01ec64.pth"
+        }
+       ],
+       "download_bytes": 3041880999,
+       "disk_bytes": 5807864834,
+       "peak_bytes": 8849745833,
        "longest_path": 139,
        "minutes": [
         10,

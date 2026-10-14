@@ -1,6 +1,6 @@
 {
  "format": 1,
- "list_version": 2,
+ "list_version": 3,
  "published": "2026-10-14",
  "app_releases": [],
  "models": [
@@ -152,6 +152,187 @@
         9.0
        ],
        "min_vram_mb": 3000
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "segmenteverygrain",
+   "backends": [
+    {
+     "name": "seg",
+     "display_name": "Segmenteverygrain (Sylvester)",
+     "package": "pm_seg_backend",
+     "module": "backend",
+     "factory": "make_backend"
+    }
+   ],
+   "authors": "Sylvester, Z., Stockli, D. F., Howes, N., et al.",
+   "citation": "Sylvester, Z., Stockli, D. F., Howes, N., Roberts, K., Malkowski, M. A., Poros, Z., Martindale, R. C., & Bai, W. (2025). Segmenteverygrain: A Python module for segmentation of grains in images. Journal of Open Source Software, 10(112), 7953. https://doi.org/10.21105/joss.07953",
+   "licence_code": "Apache-2.0 (segmenteverygrain, SAM 2); MIT (adapter)",
+   "licence_weights": "Apache-2.0 (U-Net weights, segmenteverygrain repository; SAM 2.1 weights, Meta)",
+   "description": "U-Net prompts and Segment Anything 2.1 masks for grain outlines (segmenteverygrain 0.5.0). Score is the mean U-Net grain probability under the outline.",
+   "homepage": "https://github.com/soloyant/pebblemapper-backend-segmenteverygrain",
+   "runs_in": "own",
+   "releases": [
+    {
+     "release": "1.0.0",
+     "commit": "d2a9593ded04a89c5b39822b6987a3735b5f61d3",
+     "summary": "First release: segmenteverygrain 0.5.0 with SAM 2.1 (hiera large).",
+     "notes": "https://github.com/soloyant/pebblemapper-backend-segmenteverygrain/releases/tag/v1.0.0",
+     "results_may_change": false,
+     "withdrawn": false,
+     "variants": {
+      "gpu": {
+       "files": [
+        {
+         "role": "archive",
+         "url": "https://github.com/soloyant/pebblemapper-backend-segmenteverygrain/releases/download/v1.0.0/segmenteverygrain-1.0.0.zip",
+         "size": 11515,
+         "sha256": "68a87afb50ccfe98c2265ed6341ba79c7d5bfd16f4fa0ab578362aa0a24eca4f"
+        },
+        {
+         "role": "conda_lock",
+         "url": "https://github.com/soloyant/pebblemapper-backend-segmenteverygrain/releases/download/v1.0.0/conda-gpu.lock.txt",
+         "size": 3803,
+         "sha256": "9bb66d0fbfc35d3fb1837210f929f747b9b612dd9b039c54908c25dc6be38666"
+        },
+        {
+         "role": "pip_lock",
+         "url": "https://github.com/soloyant/pebblemapper-backend-segmenteverygrain/releases/download/v1.0.0/pip-gpu.lock.txt",
+         "size": 8474,
+         "sha256": "7372d0c0920464af572df9898e0ce3bfb00d90204c8481d00530eace7de0e7ca"
+        },
+        {
+         "role": "wheel",
+         "url": "https://github.com/soloyant/pebblemapper-backend-segmenteverygrain/releases/download/v1.0.0/sam2-1.1.0-py3-none-any.whl",
+         "size": 183738,
+         "sha256": "88f3b7cca039feb203dd97fd6ddf81eae2fa4f24009336e2ce6bdb29da910dfa"
+        },
+        {
+         "role": "wheel",
+         "url": "https://github.com/soloyant/pebblemapper-backend-segmenteverygrain/releases/download/v1.0.0/iopath-0.1.10-py3-none-any.whl",
+         "size": 31607,
+         "sha256": "1a6a984b6bfad70f616165ca0999518b0373bbb148a6b571d5bfe0c21b8684f9"
+        },
+        {
+         "role": "wheel",
+         "url": "https://github.com/soloyant/pebblemapper-backend-segmenteverygrain/releases/download/v1.0.0/antlr4_python3_runtime-4.9.3-py3-none-any.whl",
+         "size": 144613,
+         "sha256": "d0cbfa442a7e3efc6b85cceab80f44550a9d120b661f44e6dce7bc8ed101a5a7"
+        },
+        {
+         "role": "check_image",
+         "url": "https://github.com/soloyant/pebblemapper-backend-segmenteverygrain/releases/download/v1.0.0/check.jpg",
+         "size": 169407,
+         "sha256": "1261d2c308e15930b18923ebc36bde74f0d85b06212c1a0fe0dd4604c3036f15"
+        },
+        {
+         "role": "weights",
+         "url": "https://raw.githubusercontent.com/zsylvester/segmenteverygrain/3871eaeb796dc1b3701e03705bad4fa10eee37d8/models/seg_model_smooth_labels.keras",
+         "size": 26139279,
+         "sha256": "126b9b4fe299ae1abbfb8d9a6249704b4b0d2e966f0ccdfd41452f1a7d8e323d",
+         "dest": "weights/seg_model_smooth_labels.keras"
+        },
+        {
+         "role": "weights",
+         "url": "https://huggingface.co/facebook/sam2.1-hiera-large/resolve/665f8e2ad61cf5f53d65644ff27c8ee525124610/sam2.1_hiera_large.pt",
+         "size": 898083611,
+         "sha256": "2647878d5dfa5098f2f8649825738a9345572bae2d4350a2468587ece47dd318",
+         "dest": "weights/sam2.1_hiera_large.pt"
+        }
+       ],
+       "download_bytes": 4062016167,
+       "disk_bytes": 8179265421,
+       "peak_bytes": 12241281588,
+       "longest_path": 176,
+       "minutes": [
+        15,
+        40
+       ],
+       "check_timeout_s": 1800,
+       "min_driver": "527.41",
+       "compute_cap": [
+        5.0,
+        9.0
+       ],
+       "min_vram_mb": 3000
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": "pebblecounts",
+   "backends": [
+    {
+     "name": "pebblecounts",
+     "display_name": "PebbleCountsAuto (Purinton & Bookhagen)",
+     "package": "pm_pebblecounts_backend",
+     "module": "backend",
+     "factory": "make_backend"
+    }
+   ],
+   "authors": "Purinton, B. & Bookhagen, B.",
+   "citation": "Purinton, B., & Bookhagen, B. (2019). Introducing PebbleCounts: a grain-sizing tool for photo surveys of dynamic gravel-bed rivers. Earth Surface Dynamics, 7, 859-877. https://doi.org/10.5194/esurf-7-859-2019",
+   "licence_code": "GPL-3.0-or-later (PebbleCounts and this adapter)",
+   "licence_weights": "none (no trained model)",
+   "description": "Edge detection and ellipse filtering, no neural network and no weights; runs on the processor. Every clast is scored 1.0 (no per-instance confidence).",
+   "homepage": "https://github.com/soloyant/pebblemapper-backend-pebblecounts",
+   "runs_in": "own",
+   "releases": [
+    {
+     "release": "1.0.0",
+     "commit": "315d565b9e8dcb0e5d65c9c77e06bebeb6cdadbb",
+     "summary": "First release: PebbleCountsAuto at commit 4c80b2f.",
+     "notes": "https://github.com/soloyant/pebblemapper-backend-pebblecounts/releases/tag/v1.0.0",
+     "results_may_change": false,
+     "withdrawn": false,
+     "variants": {
+      "cpu": {
+       "files": [
+        {
+         "role": "archive",
+         "url": "https://github.com/soloyant/pebblemapper-backend-pebblecounts/releases/download/v1.0.0/pebblecounts-1.0.0.zip",
+         "size": 23652,
+         "sha256": "559aa9d4ed6805794dd81ecacf96688b25877cc24681a29b4c9777d90828d01e"
+        },
+        {
+         "role": "upstream",
+         "url": "https://github.com/soloyant/pebblemapper-backend-pebblecounts/releases/download/v1.0.0/upstream-PebbleCounts-4c80b2f.zip",
+         "size": 27329,
+         "sha256": "607642c41586a3e8ff6fa2610251146387baf2bbadd7e9e31e12249f081a01df"
+        },
+        {
+         "role": "conda_lock",
+         "url": "https://github.com/soloyant/pebblemapper-backend-pebblecounts/releases/download/v1.0.0/conda-cpu.lock.txt",
+         "size": 9883,
+         "sha256": "58e531222c0dd68c6c143bbbf59e5dd4a5fefe71bf24e0b97b813b328b9d28d6"
+        },
+        {
+         "role": "pip_lock",
+         "url": "https://github.com/soloyant/pebblemapper-backend-pebblecounts/releases/download/v1.0.0/pip-cpu.lock.txt",
+         "size": 2253,
+         "sha256": "9948a5cd1be317f0bd52e2d5a5d57cf27712f728face555c25272805e0a95d93"
+        },
+        {
+         "role": "check_image",
+         "url": "https://github.com/soloyant/pebblemapper-backend-pebblecounts/releases/download/v1.0.0/check.jpg",
+         "size": 169407,
+         "sha256": "1261d2c308e15930b18923ebc36bde74f0d85b06212c1a0fe0dd4604c3036f15"
+        }
+       ],
+       "download_bytes": 340213226,
+       "disk_bytes": 1389274512,
+       "peak_bytes": 1729487738,
+       "longest_path": 135,
+       "minutes": [
+        5,
+        15
+       ],
+       "check_timeout_s": 900,
+       "speed_vs_gpu": 0.0
       }
      }
     }

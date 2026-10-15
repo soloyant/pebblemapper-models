@@ -33,6 +33,14 @@ generated entry here and increases `list_version`.
 | ImageGrains 2.0 (Mair et al., 2026), release 1.0.0 | [pebblemapper-backend-imagegrains](https://github.com/soloyant/pebblemapper-backend-imagegrains) | BSD-3-Clause (imagegrains, cellpose), MIT (adapter); model CC BY 4.0 |
 | ImageGrains 1.2 (Mair et al., 2023), release 1.0.0 | [pebblemapper-backend-imagegrains](https://github.com/soloyant/pebblemapper-backend-imagegrains) | BSD-3-Clause (imagegrains, cellpose), MIT (adapter); model CC BY 4.0 |
 
+## PebbleMapper releases
+
+`app_releases` names the releases of PebbleMapper itself, which the app offers on its Models
+tab from version 1.1 on: [1.1.0](https://github.com/soloyant/PebbleMapper/releases/tag/v1.1.0).
+They are built with `tools/make_app_release.py`. PebbleMapper 1.0.0 does not read this list;
+its users install 1.1 once by hand
+([guide](https://github.com/soloyant/PebbleMapper/blob/main/docs/updating-from-1.0.md)).
+
 ## Licence
 
 The list itself is released under CC0 1.0. Each model keeps its own licence, given in its entry.

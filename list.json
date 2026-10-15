@@ -1,8 +1,53 @@
 {
  "format": 1,
- "list_version": 4,
+ "list_version": 5,
  "published": "2026-10-14",
- "app_releases": [],
+ "app_releases": [
+  {
+   "release": "1.1.0",
+   "commit": "156a662c6405ac1993b94a8dd73d08cf4cd8274c",
+   "summary": "Updates from the app: PebbleMapper and its detection models announce newer versions and update in the background, keeping your projects and results. The running version is shown in the top bar.",
+   "notes": "https://github.com/soloyant/PebbleMapper/releases/tag/v1.1.0",
+   "min_starter": 1,
+   "withdrawn": false,
+   "variants": {
+    "gpu": {
+     "files": [
+      {
+       "role": "archive",
+       "url": "https://github.com/soloyant/PebbleMapper/releases/download/v1.1.0/pebblemapper-1.1.0.zip",
+       "size": 86257060,
+       "sha256": "e7439a95fdd0f6869d9084fc024c301d6fd6d1291ef17b166541fd8a12624a93"
+      },
+      {
+       "role": "file_list",
+       "url": "https://github.com/soloyant/PebbleMapper/releases/download/v1.1.0/files-1.1.0.json",
+       "size": 68141,
+       "sha256": "addd0ffcce5061b72c7fe9a3056665a912f9892ccbe4bf4cabcd14dc6b84ece1"
+      },
+      {
+       "role": "conda_lock",
+       "url": "https://github.com/soloyant/PebbleMapper/releases/download/v1.1.0/app-conda-gpu.lock.txt",
+       "size": 9451,
+       "sha256": "88339319358793de0f9b54c6caaa285d14ab81cd79c5bb03917914e552242365"
+      },
+      {
+       "role": "pip_lock",
+       "url": "https://github.com/soloyant/PebbleMapper/releases/download/v1.1.0/app-pip-gpu.lock.txt",
+       "size": 20188,
+       "sha256": "73d2f88ffb26b90fafadd83546872af2c37300542048fcb88cf0b11b1ec8d30b"
+      }
+     ],
+     "download_bytes": 2359456176,
+     "disk_bytes": 8594595976,
+     "minutes": [
+      15,
+      45
+     ]
+    }
+   }
+  }
+ ],
  "models": [
   {
    "id": "orthosam",

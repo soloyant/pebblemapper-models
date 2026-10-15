@@ -57,6 +57,7 @@
         "summary": {"$ref": "#/$defs/text"},
         "notes": {"type": "string", "pattern": "^https://github\\.com/soloyant/"},
         "results_may_change": {"type": "boolean"},
+        "describes_settings": {"type": "boolean", "description": "the release ships pm_settings.json (spec 032)"},
         "withdrawn": {"type": "boolean"},
         "replacement": {"$ref": "#/$defs/semver"},
         "variants": {

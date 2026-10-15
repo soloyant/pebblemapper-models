@@ -1,7 +1,7 @@
 {
  "format": 1,
- "list_version": 5,
- "published": "2026-10-14",
+ "list_version": 6,
+ "published": "2026-10-15",
  "app_releases": [
   {
    "release": "1.1.0",
@@ -40,6 +40,50 @@
      ],
      "download_bytes": 2359456176,
      "disk_bytes": 8594595976,
+     "minutes": [
+      15,
+      45
+     ]
+    }
+   }
+  },
+  {
+   "release": "1.2.0",
+   "commit": "22efa0ba43d9032d88b3cbaf991b7e56d2c1f2c3",
+   "summary": "Model settings: each detection model's settings in the app, saved with the project and recorded in every result.",
+   "notes": "https://github.com/soloyant/PebbleMapper/releases/tag/v1.2.0",
+   "min_starter": 1,
+   "withdrawn": false,
+   "variants": {
+    "gpu": {
+     "files": [
+      {
+       "role": "archive",
+       "url": "https://github.com/soloyant/PebbleMapper/releases/download/v1.2.0/pebblemapper-1.2.0.zip",
+       "size": 86291598,
+       "sha256": "74398a8c41829005a108df613acb9a8fa68e42fe105cbc66d095e221dd7b0ce0"
+      },
+      {
+       "role": "file_list",
+       "url": "https://github.com/soloyant/PebbleMapper/releases/download/v1.2.0/files-1.2.0.json",
+       "size": 68915,
+       "sha256": "6009751113017b4b41d8556f3c177fbe1443bf94f1ddad23498a2017f7ff1c33"
+      },
+      {
+       "role": "conda_lock",
+       "url": "https://github.com/soloyant/PebbleMapper/releases/download/v1.2.0/app-conda-gpu.lock.txt",
+       "size": 9451,
+       "sha256": "88339319358793de0f9b54c6caaa285d14ab81cd79c5bb03917914e552242365"
+      },
+      {
+       "role": "pip_lock",
+       "url": "https://github.com/soloyant/PebbleMapper/releases/download/v1.2.0/app-pip-gpu.lock.txt",
+       "size": 20188,
+       "sha256": "73d2f88ffb26b90fafadd83546872af2c37300542048fcb88cf0b11b1ec8d30b"
+      }
+     ],
+     "download_bytes": 2359491488,
+     "disk_bytes": 8594731805,
      "minutes": [
       15,
       45
@@ -199,6 +243,73 @@
        "min_vram_mb": 3000
       }
      }
+    },
+    {
+     "release": "1.1.0",
+     "commit": "5312e18d97ab11a58ef7f6f7f257fbd542c8ca75",
+     "summary": "Model settings: PebbleMapper 1.2 shows this model's settings and can change them; results record the values used. Detection with PebbleMapper's values is unchanged.",
+     "notes": "https://github.com/soloyant/pebblemapper-backend-orthosam/releases/tag/v1.1.0",
+     "results_may_change": false,
+     "withdrawn": false,
+     "variants": {
+      "gpu": {
+       "files": [
+        {
+         "role": "archive",
+         "url": "https://github.com/soloyant/pebblemapper-backend-orthosam/releases/download/v1.1.0/orthosam-1.1.0.zip",
+         "size": 15991,
+         "sha256": "6c3e7d555a4debf0fcfbb7480f7bac2fa1594f66b846ca63972080037d19c64c"
+        },
+        {
+         "role": "upstream",
+         "url": "https://github.com/soloyant/pebblemapper-backend-orthosam/releases/download/v1.1.0/upstream-OrthoSAM-18da0e5.zip",
+         "size": 47062,
+         "sha256": "08e71dd071c45a8b28e867a24197a18cdb0cce19450931ecddce775cfbd1de9a"
+        },
+        {
+         "role": "conda_lock",
+         "url": "https://github.com/soloyant/pebblemapper-backend-orthosam/releases/download/v1.1.0/conda-gpu.lock.txt",
+         "size": 2928,
+         "sha256": "8106dba378ac39e4deafbe543921033da1b0b45dcbc2f100ffb4a1f8ebef8157"
+        },
+        {
+         "role": "pip_lock",
+         "url": "https://github.com/soloyant/pebblemapper-backend-orthosam/releases/download/v1.1.0/pip-gpu.lock.txt",
+         "size": 4089,
+         "sha256": "db4250fdca868c81874cede5647bdfc47cc1d765865c5bbfa7d0eacdd4cd7b65"
+        },
+        {
+         "role": "check_image",
+         "url": "https://github.com/soloyant/pebblemapper-backend-orthosam/releases/download/v1.1.0/check.jpg",
+         "size": 169407,
+         "sha256": "1261d2c308e15930b18923ebc36bde74f0d85b06212c1a0fe0dd4604c3036f15"
+        },
+        {
+         "role": "weights",
+         "url": "https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth",
+         "size": 375042383,
+         "sha256": "ec2df62732614e57411cdcf32a23ffdf28910380d03139ee0f4fcbe91eb8c912",
+         "dest": "weights/sam_vit_b_01ec64.pth"
+        }
+       ],
+       "download_bytes": 3041883419,
+       "disk_bytes": 5807872682,
+       "peak_bytes": 8849756101,
+       "longest_path": 139,
+       "minutes": [
+        10,
+        30
+       ],
+       "check_timeout_s": 900,
+       "min_driver": "527.41",
+       "compute_cap": [
+        5.0,
+        9.0
+       ],
+       "min_vram_mb": 3000
+      }
+     },
+     "describes_settings": true
     }
    ]
   },
@@ -305,6 +416,92 @@
        "min_vram_mb": 3000
       }
      }
+    },
+    {
+     "release": "1.1.0",
+     "commit": "d9b5a6ad0ad475bd38d3ffaa69f3127abef9e7c9",
+     "summary": "Model settings: PebbleMapper 1.2 shows this model's settings and can change them; results record the values used. Detection with PebbleMapper's values is unchanged. New: an optional minimum grain probability.",
+     "notes": "https://github.com/soloyant/pebblemapper-backend-segmenteverygrain/releases/tag/v1.1.0",
+     "results_may_change": false,
+     "withdrawn": false,
+     "variants": {
+      "gpu": {
+       "files": [
+        {
+         "role": "archive",
+         "url": "https://github.com/soloyant/pebblemapper-backend-segmenteverygrain/releases/download/v1.1.0/segmenteverygrain-1.1.0.zip",
+         "size": 14114,
+         "sha256": "84788d8a8657652dcc452619beb9c9e5cb513b597a3f3436a0fd52e4c7ba1ab3"
+        },
+        {
+         "role": "conda_lock",
+         "url": "https://github.com/soloyant/pebblemapper-backend-segmenteverygrain/releases/download/v1.1.0/conda-gpu.lock.txt",
+         "size": 3803,
+         "sha256": "9bb66d0fbfc35d3fb1837210f929f747b9b612dd9b039c54908c25dc6be38666"
+        },
+        {
+         "role": "pip_lock",
+         "url": "https://github.com/soloyant/pebblemapper-backend-segmenteverygrain/releases/download/v1.1.0/pip-gpu.lock.txt",
+         "size": 8474,
+         "sha256": "7372d0c0920464af572df9898e0ce3bfb00d90204c8481d00530eace7de0e7ca"
+        },
+        {
+         "role": "wheel",
+         "url": "https://github.com/soloyant/pebblemapper-backend-segmenteverygrain/releases/download/v1.1.0/sam2-1.1.0-py3-none-any.whl",
+         "size": 183738,
+         "sha256": "88f3b7cca039feb203dd97fd6ddf81eae2fa4f24009336e2ce6bdb29da910dfa"
+        },
+        {
+         "role": "wheel",
+         "url": "https://github.com/soloyant/pebblemapper-backend-segmenteverygrain/releases/download/v1.1.0/iopath-0.1.10-py3-none-any.whl",
+         "size": 31607,
+         "sha256": "1a6a984b6bfad70f616165ca0999518b0373bbb148a6b571d5bfe0c21b8684f9"
+        },
+        {
+         "role": "wheel",
+         "url": "https://github.com/soloyant/pebblemapper-backend-segmenteverygrain/releases/download/v1.1.0/antlr4_python3_runtime-4.9.3-py3-none-any.whl",
+         "size": 144613,
+         "sha256": "d0cbfa442a7e3efc6b85cceab80f44550a9d120b661f44e6dce7bc8ed101a5a7"
+        },
+        {
+         "role": "check_image",
+         "url": "https://github.com/soloyant/pebblemapper-backend-segmenteverygrain/releases/download/v1.1.0/check.jpg",
+         "size": 169407,
+         "sha256": "1261d2c308e15930b18923ebc36bde74f0d85b06212c1a0fe0dd4604c3036f15"
+        },
+        {
+         "role": "weights",
+         "url": "https://raw.githubusercontent.com/zsylvester/segmenteverygrain/3871eaeb796dc1b3701e03705bad4fa10eee37d8/models/seg_model_smooth_labels.keras",
+         "size": 26139279,
+         "sha256": "126b9b4fe299ae1abbfb8d9a6249704b4b0d2e966f0ccdfd41452f1a7d8e323d",
+         "dest": "weights/seg_model_smooth_labels.keras"
+        },
+        {
+         "role": "weights",
+         "url": "https://huggingface.co/facebook/sam2.1-hiera-large/resolve/665f8e2ad61cf5f53d65644ff27c8ee525124610/sam2.1_hiera_large.pt",
+         "size": 898083611,
+         "sha256": "2647878d5dfa5098f2f8649825738a9345572bae2d4350a2468587ece47dd318",
+         "dest": "weights/sam2.1_hiera_large.pt"
+        }
+       ],
+       "download_bytes": 4062018766,
+       "disk_bytes": 8179273988,
+       "peak_bytes": 12241292754,
+       "longest_path": 176,
+       "minutes": [
+        15,
+        40
+       ],
+       "check_timeout_s": 1800,
+       "min_driver": "527.41",
+       "compute_cap": [
+        5.0,
+        9.0
+       ],
+       "min_vram_mb": 3000
+      }
+     },
+     "describes_settings": true
     }
    ]
   },
@@ -380,6 +577,61 @@
        "speed_vs_gpu": 0.0
       }
      }
+    },
+    {
+     "release": "1.1.0",
+     "commit": "6bd8158ecad5f4e2d8a62e1b21e2be78d372d3d1",
+     "summary": "Model settings: PebbleMapper 1.2 shows this model's settings and can change them; results record the values used. Detection with PebbleMapper's values is unchanged.",
+     "notes": "https://github.com/soloyant/pebblemapper-backend-pebblecounts/releases/tag/v1.1.0",
+     "results_may_change": false,
+     "withdrawn": false,
+     "variants": {
+      "cpu": {
+       "files": [
+        {
+         "role": "archive",
+         "url": "https://github.com/soloyant/pebblemapper-backend-pebblecounts/releases/download/v1.1.0/pebblecounts-1.1.0.zip",
+         "size": 25711,
+         "sha256": "b23354074e86903fc2a4ad83ded1b4e2badd74efd08b50f53c77f3f323510540"
+        },
+        {
+         "role": "upstream",
+         "url": "https://github.com/soloyant/pebblemapper-backend-pebblecounts/releases/download/v1.1.0/upstream-PebbleCounts-4c80b2f.zip",
+         "size": 27329,
+         "sha256": "607642c41586a3e8ff6fa2610251146387baf2bbadd7e9e31e12249f081a01df"
+        },
+        {
+         "role": "conda_lock",
+         "url": "https://github.com/soloyant/pebblemapper-backend-pebblecounts/releases/download/v1.1.0/conda-cpu.lock.txt",
+         "size": 9883,
+         "sha256": "58e531222c0dd68c6c143bbbf59e5dd4a5fefe71bf24e0b97b813b328b9d28d6"
+        },
+        {
+         "role": "pip_lock",
+         "url": "https://github.com/soloyant/pebblemapper-backend-pebblecounts/releases/download/v1.1.0/pip-cpu.lock.txt",
+         "size": 2253,
+         "sha256": "9948a5cd1be317f0bd52e2d5a5d57cf27712f728face555c25272805e0a95d93"
+        },
+        {
+         "role": "check_image",
+         "url": "https://github.com/soloyant/pebblemapper-backend-pebblecounts/releases/download/v1.1.0/check.jpg",
+         "size": 169407,
+         "sha256": "1261d2c308e15930b18923ebc36bde74f0d85b06212c1a0fe0dd4604c3036f15"
+        }
+       ],
+       "download_bytes": 340215285,
+       "disk_bytes": 1389281118,
+       "peak_bytes": 1729496403,
+       "longest_path": 135,
+       "minutes": [
+        5,
+        15
+       ],
+       "check_timeout_s": 900,
+       "speed_vs_gpu": 0.0
+      }
+     },
+     "describes_settings": true
     }
    ]
   },
@@ -461,6 +713,67 @@
        "min_vram_mb": 3000
       }
      }
+    },
+    {
+     "release": "1.1.0",
+     "commit": "b8e13e01d7afb9b3f83b45f03d4668ac3cc8d328",
+     "summary": "Model settings: PebbleMapper 1.2 shows this model's settings and can change them; results record the values used. Detection with PebbleMapper's values is unchanged. Orthos are no longer reduced to 2048 pixels, and are read without rasterio (1.0.0 could not read them).",
+     "notes": "https://github.com/soloyant/pebblemapper-backend-imagegrains/releases/tag/v1.1.0",
+     "results_may_change": false,
+     "withdrawn": false,
+     "variants": {
+      "gpu": {
+       "files": [
+        {
+         "role": "archive",
+         "url": "https://github.com/soloyant/pebblemapper-backend-imagegrains/releases/download/v1.1.0/imagegrains-1.1.0.zip",
+         "size": 16940,
+         "sha256": "732e42928ddf4c9d53578c4a7d11ee434d4da42db01be3979717f30c209d6218"
+        },
+        {
+         "role": "conda_lock",
+         "url": "https://github.com/soloyant/pebblemapper-backend-imagegrains/releases/download/v1.1.0/ig2-conda-gpu.lock.txt",
+         "size": 2773,
+         "sha256": "b3359febb4ee8e5e221b07522488a376097b44d3b0759eea2a76f1d01ca1de77"
+        },
+        {
+         "role": "pip_lock",
+         "url": "https://github.com/soloyant/pebblemapper-backend-imagegrains/releases/download/v1.1.0/ig2-pip-gpu.lock.txt",
+         "size": 14831,
+         "sha256": "b72ed5e9757a7d0e814f0d1ec7a3dde9cc4cfcf588f84ee39a54bf56890558ef"
+        },
+        {
+         "role": "check_image",
+         "url": "https://github.com/soloyant/pebblemapper-backend-imagegrains/releases/download/v1.1.0/ig2-check.jpg",
+         "size": 169407,
+         "sha256": "1261d2c308e15930b18923ebc36bde74f0d85b06212c1a0fe0dd4604c3036f15"
+        },
+        {
+         "role": "weights",
+         "url": "https://github.com/soloyant/pebblemapper-backend-imagegrains/releases/download/v1.1.0/IG2_full_set_cp_SAM",
+         "size": 1218643463,
+         "sha256": "17ecfd30093cab536aa73dbc5638245a992e6dfe7f6f6c50136b2de928ea853b",
+         "dest": "weights/IG2_full_set_cp_SAM"
+        }
+       ],
+       "download_bytes": 4023460403,
+       "disk_bytes": 7043335157,
+       "peak_bytes": 11066795560,
+       "longest_path": 159,
+       "minutes": [
+        10,
+        30
+       ],
+       "check_timeout_s": 1200,
+       "min_driver": "527.41",
+       "compute_cap": [
+        5.0,
+        9.0
+       ],
+       "min_vram_mb": 3000
+      }
+     },
+     "describes_settings": true
     }
    ]
   },
@@ -542,6 +855,67 @@
        "min_vram_mb": 2000
       }
      }
+    },
+    {
+     "release": "1.1.0",
+     "commit": "b8e13e01d7afb9b3f83b45f03d4668ac3cc8d328",
+     "summary": "Model settings: PebbleMapper 1.2 shows this model's settings and can change them; results record the values used. Detection with PebbleMapper's values is unchanged. Orthos are no longer reduced to 2048 pixels, and are read without rasterio (1.0.0 could not read them).",
+     "notes": "https://github.com/soloyant/pebblemapper-backend-imagegrains/releases/tag/v1.1.0",
+     "results_may_change": false,
+     "withdrawn": false,
+     "variants": {
+      "gpu": {
+       "files": [
+        {
+         "role": "archive",
+         "url": "https://github.com/soloyant/pebblemapper-backend-imagegrains/releases/download/v1.1.0/imagegrains1-1.1.0.zip",
+         "size": 16940,
+         "sha256": "732e42928ddf4c9d53578c4a7d11ee434d4da42db01be3979717f30c209d6218"
+        },
+        {
+         "role": "conda_lock",
+         "url": "https://github.com/soloyant/pebblemapper-backend-imagegrains/releases/download/v1.1.0/ig1-conda-gpu.lock.txt",
+         "size": 2775,
+         "sha256": "511d09cac9fdf64ef795771d644492728c2915b97eed3f70ee8a19fc600e0e1f"
+        },
+        {
+         "role": "pip_lock",
+         "url": "https://github.com/soloyant/pebblemapper-backend-imagegrains/releases/download/v1.1.0/ig1-pip-gpu.lock.txt",
+         "size": 14524,
+         "sha256": "fbe6b8304a1730fae0e4f4d8483aec68697901888de102115b42d321c5af5bfb"
+        },
+        {
+         "role": "check_image",
+         "url": "https://github.com/soloyant/pebblemapper-backend-imagegrains/releases/download/v1.1.0/ig1-check.jpg",
+         "size": 169407,
+         "sha256": "1261d2c308e15930b18923ebc36bde74f0d85b06212c1a0fe0dd4604c3036f15"
+        },
+        {
+         "role": "weights",
+         "url": "https://github.com/soloyant/pebblemapper-backend-imagegrains/releases/download/v1.1.0/IG2_full_set.200525",
+         "size": 26557120,
+         "sha256": "97be6f39cf0b8a3324ecfa12d3f96f3d5a0dae508242eeba0e7c2e02579a44fb",
+         "dest": "weights/IG2_full_set.200525"
+        }
+       ],
+       "download_bytes": 2825047367,
+       "disk_bytes": 5832731470,
+       "peak_bytes": 8657778837,
+       "longest_path": 159,
+       "minutes": [
+        8,
+        25
+       ],
+       "check_timeout_s": 900,
+       "min_driver": "527.41",
+       "compute_cap": [
+        5.0,
+        9.0
+       ],
+       "min_vram_mb": 2000
+      }
+     },
+     "describes_settings": true
     }
    ]
   }
